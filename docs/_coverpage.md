@@ -1,3 +1,3 @@
-# Interview Collection
+# Learn Notes
 
 - Fighting!
