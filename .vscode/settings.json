@@ -1,8 +1,11 @@
 {
   "cSpell.words": [
     "RHHY",
+    "Vuex",
     "coverpage",
     "docsify",
-    "gtag"
+    "gtag",
+    "instanceof",
+    "typeof"
   ]
 }

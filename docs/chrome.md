@@ -1,4 +1,4 @@
-# HTTP
+# 浏览器原理问题
 
 ## HTTP/2的三大特性, 与HTTP/1.1的区别
 
@@ -52,6 +52,23 @@ HTTP/2引入二进制数据帧和流的概念，其中帧对数据进行顺序�
 > 参考文献：
 > [浅析HTTP/2的多路复用](https://segmentfault.com/a/1190000011172823?utm_source=tag-newest)
 
+## 浏览器缓存，从Url进入后执行了什么？页面过期时间等
+
+> 题目来源：2020.12-百度
+
+啊
+
+> 参考文献：
+> [缓存](https://mp.weixin.qq.com/s/7U-poWxaq3ZuBXQJOAtrtQ)
+
 ## HTTP缓存，具体强缓存的字段和协商缓存的字段
 
-> 题目来源：2020.12-百度 一面
+> 题目来源：2020.12-百度
+
+## cookie，localStorage的区别
+
+> 题目来源：2020.12 棒棒糖
+
+- cookie英文饼干，顾名思义，大小应该非常小，cookie非常小，它的大小限制在4kb左右，是网景公司的前雇员在1993年发明。它的主要用于保存登陆信息，比如你登陆某个网站市场可以看到'记住密码’,这就是通过在cookie中存入一段辨别用户身份的数据来实现的。
+- localStorage是HTML5标准中新加入的技术，当然早在IE6时代就有一个userData的东西用于本地存储，而当时考虑到浏览器的兼容性，更通用的方案是使用flash。如今localStorage被大多数浏览器所支持。
+- sessionStorage与localStorage的接口类似，但保存数据的生命周期与localStorage不同，做过后端的同学都知道Session这个词，翻译过来就是会话。而sessionStorage是前端的一个概念。它只是可以将一部分数据在当前会话中保存下来，刷新页面数据依旧存在。但是叶敏啊关闭后，sessionStorage中的数据就会被清空。
