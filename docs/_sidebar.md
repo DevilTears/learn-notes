@@ -3,10 +3,14 @@
 * [复杂度](/dataStructure/timeComplexity.md)
 
 * 浏览器原理
-* [HTTP](/html/http.md)
-* [缓存](/html/cache.md)
+* [HTTP](/browser/http.md)
+* [缓存](/browser/cache.md)
+* [跨域](/browser/crossOrigin.md)
+* [重绘与回流](/browser/reflowAndRepaint.md)
 
 * CSS
+* [CSS基本](/css/base.md)
+* [CSS3](/css/css3.md)
 * [盒式模型](/css/box.md)
 * [Flex](/css/flex.md)
 * [布局问题](/css/layout.md)
@@ -14,6 +18,7 @@
 * [实现](/css/achieve.md)
 
 * JavaScript
+* [JS基本](/javascript/base.md)
 * [循环](/javascript/for.md)
 * [Promise](/javascript/promise.md)
 * [请求](/javascript/request.md)
@@ -31,6 +36,7 @@
 * [前端框架对比](/frame/FEFrameDiff.md)
 
 * 架构
+* [移动端](/architecture/mobile.md)
 * [工程化](/architecture/engineering.md)
 * [埋点](/architecture/buriedPoint.md)
 * [Webpack](/architecture/webpack.md)
@@ -46,6 +52,3 @@
 * [闭包](/codeRunningProblem/closure.md)
 * [Promise](/codeRunningProblem/promise.md)
 * [其他](/codeRunningProblem/other.md)
-
-* 心理学
-* [心理问题](/mental/mental.md)
