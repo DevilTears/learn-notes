@@ -63,6 +63,8 @@ mounted之后可以document.querySelector获取dom节点
 
 > 题目来源：2020.12-好未来
 
+## vue 兄弟组件传值
+
 ## 什么是Vuex
 
 > 题目来源：2020.12 棒棒糖

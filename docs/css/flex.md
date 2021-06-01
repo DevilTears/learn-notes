@@ -1,13 +1,14 @@
 # flex
 
-## flex参数align-items等
+## flex弹性布局，常用属性
 
 > 题目来源：2020.12 棒棒糖
 
-flex-direction 主轴方向
-justify-content 主轴排列
-align-items 副轴排列
-flex-wrap 换行
+flex-direction: row（默认）/colum
+align-items（垂直方向对齐）
+justify-content（水平方向对齐）: start、end、center、space-around、space-between
+flex-wrap（换行）
+flex: 1
 
 ## flex布局，左侧定宽，右侧怎么撑起
 
