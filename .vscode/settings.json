@@ -6,6 +6,7 @@
     "docsify",
     "gtag",
     "instanceof",
-    "typeof"
+    "typeof",
+    "unobserve"
   ]
 }

@@ -13,6 +13,10 @@
 
 mounted之后可以document.querySelector获取dom节点
 
+## vue中nextTick的实现，结合浏览器事件循环机制说一下
+
+> 题目来源：2020.12-好未来
+
 ## vue中怎么让css只在这个组件内生效
 
 > 题目来源：2020.12 棒棒糖
@@ -34,6 +38,32 @@ mounted之后可以document.querySelector获取dom节点
 /* 或者 不加scoped */
 .parent-component-class .child-component-class {}
 ```
+
+## vue中template模版怎么编译渲染成虚拟dom树的
+
+> 题目来源：2020.12-好未来
+
+## vue2双向绑定原理
+
+> 题目来源：2020.12-好未来
+
+## vue3双向绑定原理
+
+> 题目来源：2020.12-好未来
+
+## vue3比vue2有过那些优化
+
+> 题目来源：2020.12-好未来
+
+## 了解vue3相关的一些拓展吗
+
+> 题目来源：2020.12-好未来
+
+## setup的生命周期是在什么时候，那两个钩子之间
+
+> 题目来源：2020.12-好未来
+
+## vue 兄弟组件传值
 
 ## 什么是Vuex
 
