@@ -23,6 +23,7 @@
 * [Promise](/javascript/promise.md)
 * [请求](/javascript/request.md)
 * [ES6](/javascript/es6.md)
+* [闭包](/javascript/closure.md)
 * [原型链](/javascript/prototypeChain.md)
 * [深浅拷贝](/javascript/copy.md)
 * [异常处理](/javascript/error.md)

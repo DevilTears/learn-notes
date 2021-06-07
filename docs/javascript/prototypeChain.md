@@ -15,3 +15,24 @@
 ## class如何继承
 
 > 题目来源：2020.12-百度
+
+## ES5实现继承
+
+```js
+function Sup (name) {
+  this.name = name;
+}
+
+Sup.prototype.getName = function () {
+  console.log(this.name)
+}
+
+function Child (name) {
+  Parent.call(this, name);
+}
+
+Child.prototype = Object.create(Sup.prototype);
+Child.prototype.constructor = Child;
+```
+
+### 如果提到了Object.create,可以提问Object.create(null) 生成的空对象与{}的区别

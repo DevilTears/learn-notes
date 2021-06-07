@@ -19,3 +19,11 @@
 ## 了解过webpack5吗
 
 > 题目来源：2020.12-百度
+
+## webpack
+
+[Webpack面试题](https://juejin.cn/post/6844904094281236487#heading-6)
+
+## Vite
+
+[Vite 与 Webpack 对比](https://blog.csdn.net/weixin_40906515/article/details/114313102)
