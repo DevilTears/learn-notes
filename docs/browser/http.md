@@ -110,7 +110,7 @@
 
 > 题目来源：2020.12 好未来
 
-![http-code](./images/http-code.png)
+![http-code](https://deviltears.github.io/learn-notes/images/http-code.png)
 
 - 200 ok（请求成功）
 - 204 no content （请求成功，但是没有结果返回）
@@ -196,11 +196,11 @@ HTTP/2的多路复用就是为了解决上述的两个性能问题，我们来�
 
 - 解决第一个：在HTTP1.1的协议中，我们传输的request和response都是基本于文本的，这样就会引发一个问题：所有的数据必须按顺序传输，比如需要传输：hello world，只能从h到d一个一个的传输，不能并行传输，因为接收端并不知道这些字符的顺序，所以并行传输在HTTP1.1是不能实现的。
 
-![image](./images/http-1.png)
+![image](https://deviltears.github.io/learn-notes/images/http-code.png)
 
 HTTP/2引入二进制数据帧和流的概念，其中帧对数据进行顺序标识，如下图所示，这样浏览器收到数据之后，就可以按照序列对数据进行合并，而不会出现合并后数据错乱的情况。同样是因为有了序列，服务器就可以并行的传输数据，这就是流所做的事情。
 
-![image](./images/http-2.png)
+![image](https://deviltears.github.io/learn-notes/images/http-2.png)
 
 - 解决第二个问题：HTTP/2对同一域名下所有请求都是基于流，也就是说同一域名不管访问多少文件，也只建立一路连接。同样Apache的最大连接数为300，因为有了这个新特性，最大的并发就可以提升到300，比原来提升了6倍！
 
@@ -244,6 +244,16 @@ HTTPS要保证客户端与服务器端的通信安全，必须使用的对称加
 
 1. 需要花钱购买证书
 2. 因为加密解密的过程，所以通信所消耗的资源更多
+
+### https 的加密过程
+
+https 在 http 基于 TCP/IP 的五层模型上，加了 SSL 协议，保证了安全性。主要通过身份认证时的“非对称加密” 与 通信时 “对称加密”来实现。当我们从浏览器地址栏输入一个 https 的 URL，到页面内容显示在屏幕上，中间经过了哪些？
+
+1. 浏览器向服务端发送请求，同时附上一份随机生成的 session ticket1
+2. 服务端向浏览器下发ca证书（证书内包含公钥、公钥算法、证书过期时间、证书有效域名、证书颁发机构等。），同时服务端将浏览器发送的 session ticket1 存储起来，并也生成一份随机 session ticket2，且将 session ticket2 下发给浏览器
+3. 浏览器收到证书后，验证证书域名是否与当前域名相符、证书是否过期等。若验证都通过。则再生成一个 随机 session ticket3，并且通过下发的证书中的公钥以及加密算法对 session ticket3 进行加密，再把这个 session ticket3 返回给服务器。同时 浏览器用 session ticket1（浏览器生成）+ session ticket2（服务端生成）+ session ticket3（浏览器生成）组合成 session key
+4. 服务端收到浏览器加密的 session ticket3 后，用配置的私钥，解密出 session ticket3 实质内容，同时也用 session ticket1（浏览器生成）+ session ticket2（服务端生成）+ session ticket3（浏览器生成）组合成 session key。如果两端这时候的 session key 一致，则表明身份验证通过。（3，4为非对称加密）
+5. 后续双方使用 这个 session key 来对信息进行加密（这时候变为对称加密）
 
 ## HTTP和HTTPS的默认端口号
 

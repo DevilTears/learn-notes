@@ -53,3 +53,33 @@ console.log(new f1(), new f2(), new f3())
 - Proxy 中 receiver：Proxy 或者继承 Proxy 的对象，Reflect 中 receiver：如果 target 对象中设置了 getter，getter 中的 this 指向 receiver
 
 ## 数组扁平化 flat 方法实现
+## 实现call函数
+
+```js
+Function.prototype.Mycall = function (ctx, ...args) {
+  const _ctx = ctx || window;
+
+  _ctx.fn = this;
+
+  let res = _ctx.fn(...args)
+  delete _ctx.fn
+  return res
+}
+```
+
+## 实现bind函数
+
+```js
+Function.prototype.MyBind = function (ctx, ...args) {
+  const self = this;
+
+  function Fn () {
+    const _ctx = this instance of Fn ? this : ctx;
+    self.apply(ctx, args.concat(Array.from(arguments)))
+  }
+
+  Fn.prototype = Object.create(this.prototype);
+
+  return Fn
+}
+```
